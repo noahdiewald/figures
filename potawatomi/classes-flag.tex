@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=stealth', line width=.2em]
+  \node (chief) at (0,0) {\large\bf Class Chief};
+
+  \node (inherent) at (10,0) {\large\bf Class inherent};
+
+  \node (flag) at (5,-10) {
+    \begin{minipage}{15em}
+      {\large\bf Class Flag}\vspace{0.5em}
+      \begin{table}
+        \centering
+        \begin{tabular}{lll}
+          \rnum & \af{nd}ekwé'wen & `my flag' \\
+          \rnum & \af{nd}ekwé'wen\af{em} & `my flag' \\
+        \end{tabular}
+        \caption{The prefix must be long but the suffix is optional.}
+      \end{table}
+    \end{minipage}
+  };
+
+  \draw[->] (flag) to (chief);
+  \draw[->] (flag) to (inherent);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=stealth', line width=.15em]
+  \node (stem) at (-10,0) {\it stem};
+  \node (stemm) at (-2,0) {{\it stem}\af{m}};
+  \node (ndstemm) at (8,4) {\af{ned}{\it stem}\af{m}};
+  \node (nstemm) at (8,-4) {\af{n}{\it stem}\af{m}};
+
+  \draw[->,dashed] (stem) to [out = 35, in = 170] node [fill=white] {\footnotesize $q\circ p$} (ndstemm);
+  \draw[->,dashed] (stem) to [out = -35, in = 190] node [fill=white] {\footnotesize $r\circ p$} (nstemm);
+
+  \draw[->] (stem) to node [fill=white] {\footnotesize $p$} (stemm);
+  \draw[->] (stemm) to node [fill=white] {\footnotesize $q$} (ndstemm);
+  \draw[->] (stemm) to node [fill=white] {\footnotesize $r$} (nstemm);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

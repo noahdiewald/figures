@@ -1,0 +1,56 @@
+\begin{tikzpicture}[>=stealth', line width=.2em]
+  \node (strong) at (0,0) {
+    \begin{minipage}{8em}
+      {\large\bf Class Strong}
+    \end{minipage}
+  };
+
+  \node[draw,ellipse] (relations) at (0,-8) {
+    \begin{minipage}{10em}
+      \begin{table}
+        \begin{tabular}{lll}
+          bobcat & $\leq$ & chief \\
+          bobcat & $\leq$ & strong \\
+          inalienable & $\leq$ & inherent \\
+          inalienable & $\leq$ & strong \\
+          & ... & \\
+        \end{tabular}
+      \end{table}
+    \end{minipage}
+  };
+
+  \node (inherent) at (40,0) {
+    \begin{minipage}{8em}
+      {\large\bf Class inherent}\vspace{0.5em}
+      \small
+      \begin{itemize}
+      \item no suffix {\it -m}
+      \item typical of inalienable possession
+      \end{itemize}
+    \end{minipage}
+  };
+
+  \node[fill=white!90] (inalienable) at (20,-5) {
+    \begin{minipage}{15em}
+      {\large{\bf Class Inalienable:} typical inalienable possession}\vspace{0.5em}
+      \begin{table}
+        \centering
+        \begin{tabular}{lll}
+          \rnum & \af{n}bemdakey & `my collarbone' \\
+          \rnum & \af{n}os & `my father' \\
+          \rnum & \af{n}medné & `my blanket' \\
+        \end{tabular}
+        \caption{A suffix {\it -m} \emph{never} appears and the prefix
+          is \emph{always} in the short form. Not overabundant.}
+      \end{table}
+    \end{minipage}
+  };
+
+  \draw[->] (inalienable) to (inherent);
+  \draw[->] (inalienable) to (strong);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

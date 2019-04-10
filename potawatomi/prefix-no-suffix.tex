@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=stealth',line width=.15em]
+  \node (long) at (5,0) {\sf\mixone{Long}};
+  \node (nosuffix) at (10,0) {\sf No-Suffix};
+  \node (short) at (0,0) {\sf\mixtwo{Short}};
+  \node (both) at (5,-6) {\alpha};
+  \node (table) at (17,-4) {
+    \begin{tabular}{l}
+      $\vdash \alpha \leq \textsf{Long}$ \\
+      $\vdash \alpha \leq \textsf{Short}$ \\
+      $\vdash \alpha \leq \textsf{No-Suffix}$ \\
+    \end{tabular}
+  };
+
+  \draw[->] (both.north) to (nosuffix);
+  \draw[->] (both.north) to (long);
+  \draw[->] (both.north) to (short);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

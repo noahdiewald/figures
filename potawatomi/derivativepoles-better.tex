@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=stealth',line width=.15em]
+  \node (msfx) at (0,0) {\Large\sf\mixone{M-Suffix}};
+  \node (nsfx) at (20,0) {\Large\sf\mixtwo{No-Suffix}};
+  \node (both) at (10,-6) {
+    \begin{minipage}{\textwidth}
+      \begin{table}
+        \Large
+        \centering
+        \begin{tabular}{ll}
+          \af{n}\mixtwo{dekobjegen} & {\large `my string'} \\
+          \af{n}\mixone{dekobjegn}\af{em} & {\large \gr{`my string'}} \\
+        \end{tabular}
+      \end{table}
+    \end{minipage}
+  };
+
+  \draw[->] (both.north) to (msfx);
+  \draw[->] (both.north) to (nsfx);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

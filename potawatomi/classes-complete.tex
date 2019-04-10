@@ -1,0 +1,146 @@
+\begin{tikzpicture}[>=stealth', line width=.2em]
+  \node (weak) at (0,0) {
+    \begin{minipage}{8em}
+      {\large\bf Class Weak}\vspace{0.5em}
+      \small
+      \begin{itemize}
+      \item long prefix {\it n(e)d-}
+      \item typical of \emph{weak} vowel initial stems: /ǒ,ə/
+      \end{itemize}
+    \end{minipage}
+  };
+
+  \node (strong) at (10,0) {
+    \begin{minipage}{8em}
+      {\large\bf Class Strong}\vspace{0.5em}
+      \small
+      \begin{itemize}
+      \item short prefix {\it n-}
+      \item (historically) typical of \emph{strong} vowel initial
+        stems: /a,e,i,o/
+      \end{itemize}
+    \end{minipage}
+  };
+
+  \node (inherent) at (20,0) {
+    \begin{minipage}{8em}
+      {\large\bf Class inherent}\vspace{0.5em}
+      \small
+      \begin{itemize}
+      \item no suffix {\it -m}
+      \item typical of inalienable possession
+      \end{itemize}
+    \end{minipage}
+  };
+
+  \node (sentient) at (30,0) {
+    \begin{minipage}{8em}
+      {\large\bf Class Sentient}\vspace{0.5em}
+      \small
+      \begin{itemize}
+      \item requires suffix {\it -m}
+      \item typical of possessed nouns for humans, animals and animate
+        plants
+      \end{itemize}
+    \end{minipage}
+  };
+  
+  \node (chief) at (0,-20) {
+    \begin{minipage}{15em}
+      {\large\bf Class Chief}\vspace{0.5em}
+      \begin{table}
+        \centering
+        \begin{tabular}{lll}
+          \rnum & \af{nd}okma\af{m} & `my chief' \\
+        \end{tabular}
+        \caption{A suffix {\it -m} is required as is a long
+          prefix. Here the initial \emph{o} is /ǒ/. These are not
+          overabundant.}
+      \end{table}
+    \end{minipage}
+  };
+
+  \node[fill=white!90] (inalienable) at (25,-20) {
+    \begin{minipage}{15em}
+      {\large{\bf Class Inalienable:} typical inalienable possession}\vspace{0.5em}
+      \begin{table}
+        \centering
+        \begin{tabular}{lll}
+          \rnum & \af{n}bemdakey & `my collarbone' \\
+          \rnum & \af{n}os & `my father' \\
+          \rnum & \af{n}medné & `my blanket' \\
+        \end{tabular}
+        \caption{A suffix {\it -m} \emph{never} appears and the prefix
+          is \emph{always} in the short form. Not overabundant.}
+      \end{table}
+    \end{minipage}
+  };
+  
+  \node (bobcat) at (5,-40) {
+    \begin{minipage}{15em}
+      {\large{\bf Class Bobcat:} inflects like `bobcat'}\vspace{0.5em}
+      \begin{table}
+        \centering
+        \begin{tabular}{lll}
+          \rnum & \af{n}bezhow\af{em} & `my bobcat' \\
+          \rnum & \af{nde}bzhow\af{em} & `my bobcat' \\
+        \end{tabular}
+        \caption{A suffix {\it -m} is required but it inflects like
+          both \emph{weak} and \emph{strong} classes.}
+      \end{table}
+    \end{minipage}
+  };
+
+  \node (flag) at (20,-40) {
+    \begin{minipage}{15em}
+      {\large{\bf Class Flag:} inflects like `flag'}\vspace{0.5em}
+      \begin{table}
+        \centering
+        \begin{tabular}{lll}
+          \rnum & \af{nd}ekwé'wen & `my flag' \\
+          \rnum & \af{nd}ekwé'wen\af{em} & `my flag' \\
+        \end{tabular}
+        \caption{The free stem for this is {\it kewé'wen}, because the
+          first {\it e} was not deleted due to the rules of syncope,
+          there should be an underlying initial weak vowel /ə/. The
+          prefix must be long but the suffix is optional.}
+      \end{table}
+    \end{minipage}
+  };
+
+  \node (general) at (10,-60) {
+    \begin{minipage}{15em}
+      {\large{\bf Class General:} ``$\text{inalienable}\times\textsc{flag}$''}\vspace{0.5em}
+      \begin{table}
+        \centering
+        \begin{tabular}{lll}
+          \rnum & \af{n}mowej & `my feces' \\
+          \rnum & \af{nde}mowj\af{em} & `my feces' \\
+          \rnum & \af{n}jiman & `my canoe' \\
+          \rnum & \af{nde}jiman & `my canoe' \\
+          \rnum & \af{n}dekobjegen & `my string' \\
+          \rnum & \af{n}dekobjegn\af{em} & `my string' \\
+        \end{tabular}
+        \caption{Four forms should be possible here for each but due
+          to data sparsity, it is difficult to find a single lexeme
+          that has been attested for all forms.}
+      \end{table}
+    \end{minipage}
+  };
+
+  \draw[->] (general) to (inalienable);
+  \draw[->] (general) to (flag);
+  \draw[->] (inalienable) to (inherent);
+  \draw[->] (inalienable) to (strong);
+  \draw[->] (flag) to (chief);
+  \draw[->] (flag.north) to (inherent.southwest);
+  \draw[->] (chief.north) to (sentient);
+  \draw[->] (chief.north) to (weak);
+  \draw[->] (bobcat.north) to (sentient);
+  \draw[->] (bobcat.north) to (strong);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

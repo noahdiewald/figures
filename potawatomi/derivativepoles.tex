@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=stealth']
+  \matrix[column 1/.style={nodes={text width=18em,text ragged}}] at (-5,0.5)
+  {
+    \node {$both\leq_I short$}; \\
+    \node {$both\leq_I long$}; \\
+  };
+
+  \node (3) at (0,1) {$short$};
+  \node (34) at (3,0) {$both$};
+  \node (4) at (6,1) {$long$};
+
+  \draw[<-] (3) to (34);
+  \draw[<-] (4) to (34);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

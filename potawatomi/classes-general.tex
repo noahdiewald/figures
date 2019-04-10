@@ -1,0 +1,31 @@
+\begin{tikzpicture}[>=stealth', line width=.2em]
+  \node (inalienable) at (0,0) {\large\bf Class Inalienable};
+
+  \node (flag) at (20,0) {\large\bf Class Flag};
+
+  \node (general) at (10,-13) {
+    \begin{minipage}{15em}
+      {\large{\bf Class General:} ``$\text{inalienable}\times\textsc{flag}$''}\vspace{0.5em}
+      \begin{table}
+        \centering
+        \begin{tabular}{lll}
+          \rnum & \af{n}mowej & `my feces' \\
+          \rnum & \af{nde}mowj\af{em} & `my feces' \\
+          \rnum & \af{n}jiman & `my canoe' \\
+          \rnum & \af{nde}jiman & `my canoe' \\
+          \rnum & \af{n}dekobjegen & `my string' \\
+          \rnum & \af{n}dekobjegn\af{em} & `my string' \\
+        \end{tabular}
+        \caption{Four forms \emph{should} be possible for each.}
+      \end{table}
+    \end{minipage}
+  };
+
+  \draw[->] (general) to (inalienable);
+  \draw[->] (general) to (flag);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

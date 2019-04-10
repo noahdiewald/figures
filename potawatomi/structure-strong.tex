@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=stealth', line width=.15em]
+  \node (stem) at (-10,0) {\it stem};
+  \node (stemm) at (-2,0) {{\it stem}\af{m}};
+  \node (nstemm) at (8,-4) {\af{n}{\it stem}\af{m}};
+  \node (nstem) at (-5,-6) {\af{n}{\it stem}};
+
+  \draw[->,dashed] (stem) to [out = -35, in = 190] node [fill=white] {\footnotesize $r\circ p$} (nstemm);
+
+  \draw[->] (stem) to node [fill=white] {\footnotesize $p$} (stemm);
+  \draw[->] (stem.south) to node [fill=white] {\footnotesize $r$} (nstem);
+  \draw[->] (stemm) to node [fill=white] {\footnotesize $r$} (nstemm);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
