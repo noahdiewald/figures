@@ -1,16 +1,12 @@
 \begin{tikzpicture}[>=stealth', line width=.15em]
-  \node (stem) at (-10,0) {\sf free};
-  \node (stemm) at (-2,0) {\sf bound};
-  \node (ndstemm) at (8,4) {\sf nposs};
-  \node (nstemm) at (8,-4) {\sf nposs};
-  \node (ndstem) at (-15,-6) {\sf nposs};
-  \node (nstem) at (-5,-6) {\sf nposs};
+  \node (stem) at (-10,0) {freem};
+  \node (stemm) at (-2,0) {bound};
+  \node (ndstemm) at (8,4) {nposs};
+  \node (nstemm) at (8,-4) {nposs};
 
-  \draw[->] (stem) to node [fill=white] {\footnotesize $p$} (stemm);
-  \draw[->] (stem.south) to node [fill=white] {\footnotesize $q$} (ndstem);
-  \draw[->] (stem.south) to node [fill=white] {\footnotesize $r$} (nstem);
-  \draw[->] (stemm) to node [fill=white] {\footnotesize $q$} (ndstemm);
-  \draw[->] (stemm) to node [fill=white] {\footnotesize $r$} (nstemm);
+  \draw[->] (stem) to node [fill=white] {\footnotesize $m$} (stemm);
+  \draw[->] (stemm) to node [fill=white] {\footnotesize $ned$} (ndstemm);
+  \draw[->] (stemm) to node [fill=white] {\footnotesize $n$} (nstemm);
 \end{tikzpicture}
 
 %%% Local Variables:

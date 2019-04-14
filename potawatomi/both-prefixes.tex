@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=stealth',line width=.15em]
+  \node (long) at (0,0) {\sf\mixone{Long}};
+  \node (short) at (10,0) {\sf\mixtwo{Short}};
+  \node (both) at (5,-4) {\alpha};
+  \node (table) at (17,-2) {
+    \begin{tabular}{l}
+      $\vdash \alpha \leq \textsf{Long}$ \\
+      $\vdash \alpha \leq \textsf{Short}$ \\
+    \end{tabular}
+  };
+
+  \draw[->] (both.north) to (long);
+  \draw[->] (both.north) to (short);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

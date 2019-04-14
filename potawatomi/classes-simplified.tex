@@ -1,0 +1,34 @@
+\begin{tikzpicture}[>=stealth',line width=.1em]
+  \matrix [row sep={2em}, nodes={inner sep=0pt}]
+  {
+    \node [fill=yellow!25] (m) {\textsf{M-Suffix}}; &
+    \node [fill=red!25] (l) {\textsf{Long}}; &
+    \node (s) {\textsf{Short}}; &
+    \node (n) {\textsf{No-Suffix}}; \\
+    &
+    \node [ellipse,fill=orange!25] (lm) {\cgrid{L}{}{}{M}}; &
+    &
+    \node (sn) {\textsf{inalienable}}; \\
+    &
+    \node [ellipse,fill=red!25] (lnm) {\cgrid{L}{}{N}{M}}; &
+    \node [ellipse,fill=yellow!25] (lsm) {\cgrid{L}{S}{}{M}}; &
+    \\
+    & & \node (lsnm) {\textsf{all}}; \\
+  };
+
+  \draw (lm.north) to (l.south);
+  \draw (lm.north) to (m.south);
+  \draw (sn.north) to (s.south);
+  \draw[->] (sn.north) to (n.south);
+  \draw[->] (lnm.north) to (m.south);
+  \draw (lnm.north) to (lm.south);
+  \draw (lsm.north) to (s.south);
+  \draw (lsm.north) to (lm.south);
+  \draw[->] (lsnm.north) to (lnm.south);
+  \draw[->] (lsnm.north) to (lsm.south);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:
