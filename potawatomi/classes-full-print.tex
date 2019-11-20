@@ -5,15 +5,15 @@
     \node (n) {\begin{tabular}{cc}\textsf{No-Suffix}\\ \cgrid{}{}{N}{}\end{tabular}}; &
     \node (m) {\begin{tabular}{cc}\textsf{M-Suffix}\\ \cgrid{}{}{}{M}\end{tabular}}; &
     \node (s) {\begin{tabular}{cc}\textsf{Short}\\ \cgrid{}{S}{}{}\end{tabular}}; \\
-    \node [draw,color=gray,fill=gray!25] (ln) {\cgrid{L}{}{N}{}}; &
+    \node [draw,color=gray!50,fill=gray!25] (ln) {\cgrid{L}{}{N}{}}; &
     \node (lm) {\cgrid{L}{}{}{M}}; &
     \node [draw,color=black] (sn) {\cgrid{}{S}{N}{}}; &
-    \node [draw,color=gray,fill=gray!25] (sm) {\cgrid{}{S}{}{M}}; \\
+    \node [draw,color=gray!50,fill=gray!25] (sm) {\cgrid{}{S}{}{M}}; \\
     \node (lnm) {\cgrid{L}{}{N}{M}}; &
-    \node [draw,color=gray,fill=gray!25] (lsn) {\cgrid{L}{S}{N}{}}; &
+    \node [draw,color=gray!50,fill=gray!25] (lsn) {\cgrid{L}{S}{N}{}}; &
     \node (lsm) {\cgrid{L}{S}{}{M}}; &
-    \node [draw,fill=gray!25] (snm) {\cgrid{}{S}{N}{M}}; \\
-    \node [draw,color=gray] (lsnm) {\cgrid{L}{S}{N}{M}}; & & \\
+    \node [draw,color=gray!50,fill=gray!25] (snm) {\cgrid{}{S}{N}{M}}; \\
+    \node [draw,text=black,color=gray] (lsnm) {\cgrid{L}{S}{N}{M}}; & & \\
   };
 
   \draw[->] (ln.north) to (l.south);
