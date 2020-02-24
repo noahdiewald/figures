@@ -1,0 +1,13 @@
+\tikz [>=latex', line width=.15ex]
+\graph [layered layout, grow'=up, edges=rounded corners, level distance=3em]
+{
+  "cbase" <- {"(chiq,nki)", "nki", "n"},
+  "p1base" <- {"nki", "n", "waq"},
+  "(waq,nki)" <- {"waq", "(man,nki)"},
+  "(chiq,waq,nki)" <- {"(chiq,waq)", "(man,chiq,nki)"};
+};
+  
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../slides/poster"
+%%% End:
