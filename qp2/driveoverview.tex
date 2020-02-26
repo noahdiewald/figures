@@ -1,0 +1,32 @@
+\begin{tikzpicture}[>=stealth']
+  \node at (0,1.5) {Form Entries};
+  \node[text width=7em, text ragged] at (5,1.5) {Proto-lexical Mapping};
+  \node at (10,1.5) {Lexical Entries};
+  
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,rectangle,draw,text width=12em,text ragged}}] at (0,0)
+  {
+    \node (ed) {$\left< \mathsf{past}, \textsc{drive}, \mathrm{drove} \right>$};   \\
+    \node (en) {$\left< \mathsf{part}, \textsc{drive}, \mathrm{driven} \right>$};   \\
+  };
+
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,rectangle,draw,text width=17em,text ragged}}] at (10,0)
+  {
+    \node (e5) {$\left< \lexem{\lambda{s}.s\bullet{drove}}{Nom\multimap{Fin}}{PST(drive)} \right>$};   \\
+    \node (e6) {$\left< \lexem{driven}{PRO \multimap{Psp}}{drive} \right>$};                            \\
+  };
+
+  \draw[->] (ed) to (e5);
+  \draw[->] (en) to (e6);
+
+  %\draw[->] (simple.east) .. controls +(right:6mm) .. (ded.east);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

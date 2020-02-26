@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=stealth']
+  \node (simple) at (0,0) {simple};
+  \node (possessable) at (3,4) {possessable};
+  \node (gpossessable) at (1.5,2) {gpossessable};
+  \node (npossessable) at (4.5,2) {npossessable};
+  \node (prefixed) at (3,0) {prefixed};
+  \node (gprefixed) at (2,-2) {gprefixed};
+  \node (nprefixed) at (4,-2) {nprefixed};
+  \draw[->] (prefixed.south) to (gprefixed);
+  \draw[->] (prefixed.south) to (nprefixed);
+  \draw[->] (possessable.south) to (gpossessable);
+  \draw[->] (possessable.south) to (npossessable);
+%  \draw[dashed,->] (simple.south) .. controls +(down:2mm) .. (possessable.west);
+  \draw[dashed,->] (simple.south) .. controls  +(right:1mm) and +(left:4mm) .. (gprefixed.west);
+  \draw[dashed,->] (simple.south) .. controls +(down:30mm) .. (nprefixed.south);
+  \draw[dashed,->] (gprefixed.north) .. controls +(left:2mm) .. (gpossessable.south);
+  \draw[dashed,->] (nprefixed.north) .. controls +(right:2mm) .. (npossessable.south);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

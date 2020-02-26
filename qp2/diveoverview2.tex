@@ -1,0 +1,34 @@
+\begin{tikzpicture}[>=stealth']
+  \node at (0,1.5) {Form Entries};
+  \node[text width=7em, text ragged] at (5,1.5) {Proto-lexical Mapping};
+  \node at (10,1.5) {Lexical Entries};
+  
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,rectangle,draw,text width=12em,text ragged}}] at (0,0)
+  {
+    \node (ed) {$\left< \mathsf{past}, \textsc{dive}, \mathrm{dove} \right>$};   \\
+    \node (ed2) {$\left< \mathsf{allpast}, \textsc{dive}, \mathrm{dived} \right>$};   \\
+  };
+
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,rectangle,draw,text width=17em,text ragged}}] at (10,0)
+  {
+    \node (e5) {$\left< \lexem{\lambda{s}.s\bullet{dove}}{Nom\multimap{Fin}}{PST(dive)} \right>$};   \\
+    \node (e52) {$\left< \lexem{\lambda{s}.s\bullet{dived}}{Nom\multimap{Fin}}{PST(dive)} \right>$};   \\
+    \node (e62) {$\left< \lexem{dived}{PRO \multimap{Psp}}{dive} \right>$};                            \\
+  };
+
+  \draw[->] (ed) to (e5);
+  \draw[->] (ed2) to (e52);
+  \draw[->] (ed2) to (e62);
+
+  %\draw[->] (simple.east) .. controls +(right:6mm) .. (ded.east);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

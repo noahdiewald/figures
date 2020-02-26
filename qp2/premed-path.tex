@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=stealth']
+  \node (dependent) at (0,4) {dependent};
+  \node (ready) at (0,2) {ready};
+  \node (premed) at (0,-2) {premed};
+  \node (med) at (0,0) {med};
+  \node (gfix) at (4,2) {gfix};
+  \node (nfix) at (-4,2) {nfix};
+  \draw[->] (ready) to (med);
+  \draw[->] (premed) to (med);
+  \draw[->] (ready) to (gfix);
+  \draw[->] (ready) to (nfix);
+  \draw[->] (med.north) to (gfix);
+  \draw[->] (med.north) to (nfix);
+  \draw[->] (dependent.south) to (gfix);
+  \draw[->] (dependent.south) to (nfix);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

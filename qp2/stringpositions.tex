@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=stealth']
+  \matrix[column 1/.style={nodes={text width=9em,text ragged}}] at (-3,-1)
+  {
+    \node {$\mathsf{derived}\leq \mathsf{prefixable}$}; \\
+    \node {$\mathsf{ready}\leq \mathsf{prefixable}$}; \\
+  };
+  \node (ded) at (0,-2) {$\mathsf{derived}$};
+  \node (ened) at (2,-2) {$\mathsf{ready}$};
+  \node (dened) at (1,0) {$\mathsf{prefixable}$};
+
+  \draw[->] (ded) to (dened);
+  \draw[->] (ened) to (dened);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

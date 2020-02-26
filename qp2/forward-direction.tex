@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=stealth']
+  \node (simple2) at (2,2) {simple$^\prime$};
+  \node (simple) at (1,0) {simple};
+  \node (med) at (3,0) {med};
+  \node (prefixed) at (6,2) {prefixed};
+  \node (gprefixed) at (5,0) {gprefixed};
+  \node (nprefixed) at (7,0) {nprefixed};
+  \draw[->] (prefixed.south) to (gprefixed);
+  \draw[->] (prefixed.south) to (nprefixed);
+  \draw[->] (simple2.south) to (med);
+  \draw[->] (simple2.south) to (simple);
+  \draw[dashed,->] (simple) to (med);
+  \draw[dashed,->] (med.south) .. controls +(left:1mm) and +(down:6mm) .. (gprefixed.south);
+  \draw[dashed,->] (med.south) .. controls +(left:1mm) and +(down:20mm) .. (nprefixed.south);
+  \draw[dashed,->] (simple2.east) .. controls  +(right:5mm) .. (gprefixed.north);
+  \draw[dashed,->] (simple2.east) .. controls +(right:20mm) and +(up:50mm) .. (nprefixed.north);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

@@ -1,0 +1,14 @@
+\tikz [>=stealth']
+\graph [layered layout, grow'=up, edges=rounded corners]
+{
+  "$\mcat{default}$" <- {"$\mcat{meant}$", "$\mcat{snoozed}$", "$\mcat{drove}$", "$\mcat{written}$"},
+  "$\mcat{meant}$" <- {"$\mcat{leap}$"},
+  "$\mcat{snoozed}$" <- {"$\mcat{leap}$"},
+  "$\mcat{drove}$" <- {"$\mcat{ride}$"},
+  "$\mcat{written}$" <- {"$\mcat{ride}$", "$\mcat{show}$"};
+};
+  
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

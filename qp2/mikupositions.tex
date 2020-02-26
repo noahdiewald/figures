@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=stealth']
+  \matrix[column 1/.style={nodes={text width=9em,text ragged}}] at (-3,-1)
+  {
+    \node {$\mathsf{simple}\leq \mathsf{position1}$}; \\
+    \node {$\mathsf{past}\leq \mathsf{position1}$}; \\
+    \node {$\mathsf{near}\leq \mathsf{position1}$}; \\
+  };
+  \node (ded) at (0,-2) {$\mathsf{simple}$};
+  \node (ened) at (2,-2) {$\mathsf{past}$};
+  \node (ened2) at (4,-2) {$\mathsf{near}$};
+  \node (dened) at (2,0) {$\mathsf{position1}$};
+
+  \draw[<-] (dened) to (ded);
+  \draw[<-] (dened) to (ened2);
+  \draw[<-] (dened) to (ened);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

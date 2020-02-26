@@ -1,0 +1,13 @@
+\tikz [>=stealth']
+\graph [layered layout, grow'=up, edges=rounded corners]
+{
+  "$\mcat{pbase}$" <- {"$\mcat{kbase}$", "$\mcat{sbase}$"},
+  "$\mcat{kbase}$" <- {"$\mcat{(s,nbase)}$", "$\mcat{nbase}$"},
+  "$\mcat{sbase}$" <- {"$\mcat{nbase}$", "$\mcat{(kuna,nbase)}$"},
+  "$\mcat{kuna}$" <- {"$\mcat{(kuna,nbase)}$", "$\mcat{(kuna,s,nbase)}$", "$\mcat{(s,kuna,nbase)}$"};
+};
+  
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

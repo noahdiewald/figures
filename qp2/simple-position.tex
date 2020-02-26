@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=stealth']
+  \node (free) at (0.5,0) {free};
+  \node (fixable) at (3.5,0) {fixable};
+  \node[draw,ellipse,thin,inner sep=2pt,text depth=0pt] (premed) at (-1,-2) {premed};
+  \node[draw,ellipse,thin,inner sep=2pt,text depth=0pt] (ready) at (2,-2) {ready};
+  \node (med) at (3.5,-2) {med};
+  \node[draw,ellipse,thin,inner sep=2pt] (bound) at (5,-2) {bound};
+  \node (gfix) at (1,-4) {gfix};
+  \node (nfix) at (3,-4) {nfix};
+  \draw[->] (free.south) to (ready.north);
+  \draw[->] (free.south) to (premed.north);
+  \draw[->] (fixable.south) to (ready.north);
+  \draw[->] (fixable.south) to (med.north);
+  \draw[->] (fixable.south) to (bound.north);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

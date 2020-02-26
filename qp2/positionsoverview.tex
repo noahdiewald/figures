@@ -1,0 +1,46 @@
+\begin{tikzpicture}[>=stealth']
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,rectangle,draw,text width=6em,text ragged}}] at (0,0)
+  {
+    \node (bse) {$\mathsf{bse}$}; \\
+    \node (bse1) {com};     \\
+    \node (bse2) {habl};     \\
+  };
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,rectangle,draw,text width=6em,text ragged}}] at (4,0)
+  {
+    \node (v) {$\mathsf{ved}$}; \\
+    \node (e) {come};    \\
+    \node (a) {habla};    \\
+  };
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,rectangle,draw,text width=6em,text ragged}}] at (8,0)
+  {
+    \node (vr) {$\mathsf{red}$}; \\
+    \node (er) {comer};     \\
+    \node (ar) {hablar};   \\
+  };
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,rectangle,draw,text width=6em,text ragged}}] at (12,0)
+  {
+    \node (vre) {$\mathsf{réed}$}; \\
+    \node (ere) {comeré};     \\
+    \node (are) {hablaré};     \\
+  };
+
+  \draw[->] (bse) to (v);
+  \draw[->] (v) to (vr);
+  \draw[->] (vr) to (vre);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

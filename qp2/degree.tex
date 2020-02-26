@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+  \node (ged) at (0,1) {$ged$};
+  \node (highschool) at (0,0) {$highschool$};
+  \node (bachelors) at (2,0) {$bachelors$};
+  \node (phd) at (4,0) {$phd$};
+  \draw [->] (ged) -- (bachelors);
+  \draw [->] (highschool) -- (bachelors);
+  \draw [->] (bachelors) -- (phd);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

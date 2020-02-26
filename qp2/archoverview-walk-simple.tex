@@ -1,0 +1,41 @@
+\begin{tikzpicture}[>=stealth']
+  \node[text width=5em, text ragged] at (0.5,2) {\bf Forms};
+  \node[text width=5em, text ragged] at (2.5,2) {\bf Mapping};
+  \node[text width=9em, text ragged] at (6,2) {\bf Lexical Entries};
+  
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,text width=3.5em,align=right}}] at (0,0)
+  {
+    \node (bse) {$\mathrm{walk}$};     \\
+    \node (s) {$\mathrm{walks}$};    \\
+    \node (ed) {$\mathrm{walked}$};   \\
+    \node (ing) {$\mathrm{walking}$};  \\
+  };
+
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,text width=12em,text ragged}}] at (6,0)
+  {
+    \node (e1) {$\lexet{\lambda{s}.s\bullet{walk}}{Nom_{\neg3s}\multimap{Fin}}{walk}$}; \\
+    \node (e2) {$\lexet{walk}{PRO \multimap{Bse}}{walk}$};                              \\
+    \node (e3) {$\lexet{\lambda{s}.s\bullet{walks}}{Nom_{3s}\multimap{Fin}}{walk}$};    \\
+    \node (e5) {$\lexet{\lambda{s}.s\bullet{walked}}{Nom\multimap{Fin}}{PST(walk)}$};   \\
+    \node (e6) {$\lexet{walked}{PRO \multimap{Psp}}{walk}$};                            \\
+    \node (e4) {$\lexet{walking}{PRO \multimap{Prp}}{walk}$};                           \\
+  };
+
+  \draw[->] (bse) to node[fill=white] {.} (e2);
+  \draw[->] (bse) to node[fill=white,above] {$\scriptstyle f_1$} (e1);
+  \draw[->] (s) to node[fill=white] {.} (e3);
+  \draw[->] (ed) to node[fill=white] {.} (e5);
+  \draw[->] (ed) to node[fill=white] {.} (e6);
+  \draw[->] (ing) to node[fill=white] {$\scriptstyle f_6$} (e4);
+  %\draw[->] (simple.east) .. controls +(right:6mm) .. (ded.east);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

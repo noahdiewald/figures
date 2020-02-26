@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=stealth']
+  % \matrix[column 1/.style={nodes={text width=18em,text ragged,font=\scriptsize}}] at (-0.5,-1)
+  % {
+  %   \node {$\mathsf{simple}\leq \mathsf{pos1}$}; \\
+  %   \node {$\left\{\mathsf{simple,plural1}\right\}\leq \mathsf{pos1}$}; \\
+  %   \node {$\mathsf{simple}\leq \mathsf{pos2}$}; \\
+  %   \node {$\mathsf{plural2}\leq \mathsf{pos2}$}; \\
+  %   \node {$\mathsf{plural}\leq \mathsf{plural1}$}; \\
+  %   \node {$\mathsf{plural}\leq \mathsf{plural2}$}; \\
+  % };
+  
+  \node (allqu) at (-0.5,0) {$\sformt{simple}{allqu}$};
+  \node (allqus) at (2,3) {$\sformt{\{plural1, simple\}}{allqu\red{s}}$};
+  \node (allqukuna) at (2,-3) {$\sformt{\{plural2, simple\}}{allqu\blue{kuna}}$};
+  \node (allquskuna) at (5,1.5) {$\sformt{\{plural1, plural2, simple\}}{allqu\red{s}\blue{kuna}}$};
+  \node (allqukunas) at (5,-1.5) {$\sformt{\{plural1, plural2, simple\}}{allqu\blue{kuna}\red{s}}$};
+
+  \draw[->] (allqu) to node[fill=white] {$p_1$} (allqus);
+  \draw[->] (allqu) to node[fill=white] {$p_2$} (allqukuna);
+  \draw[->] (allqus) to node[fill=white] {$p_2$} (allquskuna);
+  \draw[->] (allqukuna) to node[fill=white] {$p_1$} (allqukunas);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../slides/slides"
+%%% End:

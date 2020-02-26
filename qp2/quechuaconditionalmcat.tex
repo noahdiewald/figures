@@ -1,0 +1,13 @@
+\tikz [>=stealth']
+\graph [layered layout, grow'=up, edges=rounded corners]
+{
+  "$\mcat{cbase}$" <- {"$\mcat{(chiq,nki)}$", "$\mcat{nki}$", "$\mcat{n}$", "$\mcat{i}$"},
+  "$\mcat{p1base}$" <- {"$\mcat{nki}$", "$\mcat{n}$", "$\mcat{waq}$"},
+  "$\mcat{(waq,nki)}$" <- {"$\mcat{waq}$", "$\mcat{(man,nki)}$"},
+  "$\mcat{(chiq,waq,nki)}$" <- {"$\mcat{(chiq,waq)}$", "$\mcat{(man,chiq,nki)}$"};
+};
+  
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

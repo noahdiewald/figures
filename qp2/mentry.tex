@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=stealth']
+  \node (bse) at (0,0) {$\left< \mathsf{simple}, \textsc{walk}, \mathrm{walk} \right>$};
+  \node (s) at (-3,-2) {$\left< \mathsf{third}, \textsc{walk}, \mathrm{walk\#s} \right>$};
+  \node (ed) at (0,-3) {$\left< \mathsf{allpast}, \textsc{walk}, \mathrm{walk\#ed} \right>$};
+  \node (ing) at (4,-4) {$\left< \mathsf{present}, \textsc{walk}, \mathrm{walk\#ing} \right>$};
+
+  \draw[->] (bse) to node[fill=white] {$p_1$} (s);
+  \draw[->] (bse) to node[fill=white] {$p_2$} (ed);
+  \draw[->] (bse) to node[fill=white] {$p_3$} (ing);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

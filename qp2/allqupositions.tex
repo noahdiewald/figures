@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=stealth']
+  \matrix[column 1/.style={nodes={text width=18em,text ragged,font=\scriptsize}}] at (-0.5,-1)
+  {
+    \node {$\mathsf{simple}\leq \mathsf{pos1}$}; \\
+    \node {$\left\{\mathsf{plural1, simple}\right\}\leq \mathsf{pos1}$}; \\
+    \node {$\mathsf{simple}\leq \mathsf{pos2}$}; \\
+    \node {$\left\{\mathsf{plural2, simple}\right\}\leq \mathsf{pos2}$}; \\
+  };
+  \node (ened) at (-0.5,-3) {$\left\{\mathsf{plural1, simple}\right\}$};
+  \node (ened2) at (1,0) {$\mathsf{pos1}$};
+  \node (ded) at (2.5,-3) {$\mathsf{simple}$};
+  \node (dened) at (4,0) {$\mathsf{pos2}$};
+  \node (dened2) at (5.5,-3) {$\left\{\mathsf{plural2, simple}\right\}$};
+
+  \draw[<-] (ened2) to (ded);
+  \draw[<-] (ened2) to (ened);
+  \draw[<-] (dened) to (dened2);
+  \draw[<-] (dened) to (ded);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../slides/slides"
+%%% End:

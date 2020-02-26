@@ -1,0 +1,50 @@
+\begin{tikzpicture}[>=stealth']
+  \node[text width=5em, text ragged] at (0.5,1) {\bf Forms};
+  \node[text width=5em, text ragged] at (2.5,1) {\bf Mapping};
+  \node[text width=9em, text ragged] at (6,1) {\bf Lexical Entries};
+  
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,text width=3.5em,align=right}}] at (0,0)
+  {
+    \node (ed) {$\mathrm{drove}$};   \\
+    \node (en) {$\mathrm{driven}$};   \\
+  };
+
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,text width=12em,text ragged}}] at (6,0)
+  {
+    \node (e5) {$\lexet{\lambda{s}.s\bullet{drove}}{Nom\multimap{Fin}}{PST(drive)}$};   \\
+    \node (e6) {$\lexet{driven}{PRO \multimap{Psp}}{drive}$};                            \\
+  };
+
+  \draw[->] (ed) to (e5);
+  \draw[->] (en) to (e6);
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,text width=3.5em,align=right}}] at (0,-2)
+  {
+    \node (all) {$\mathrm{walked}$};   \\
+  };
+
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,text width=12em,text ragged}}] at (6,-2)
+  {
+    \node (e5b) {$\lexet{\lambda{s}.s\bullet{walked}}{Nom\multimap{Fin}}{PST(walk)}$};   \\
+    \node (e6b) {$\lexet{walked}{PRO \multimap{Psp}}{walk}$};                            \\
+  };
+
+  \draw[->] (all) to (e5b);
+  \draw[->] (all) to (e6b);
+
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

@@ -1,0 +1,42 @@
+\begin{tikzpicture}[>=stealth']
+  \node[text width=5em, text ragged] at (0.5,2) {\bf Forms};
+  \node[text width=5em, text ragged] at (2.5,2) {\bf Mapping};
+  \node[text width=9em, text ragged] at (6,2) {\bf Lexical Entries};
+  
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,text width=3.5em,align=right}}] at (0,0)
+  {
+    \node (bse) {$\mathrm{drive}$};     \\
+    \node (s) {$\mathrm{drives}$};    \\
+    \node (ed) {$\mathrm{drove}$};   \\
+    \node (en) {$\mathrm{driven}$};   \\
+    \node (ing) {$\mathrm{driving}$};  \\
+  };
+
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,text width=12em,text ragged}}] at (6,0)
+  {
+    \node (e1) {$\lexet{\lambda{s}.s\bullet{drive}}{Nom_{\neg3s}\multimap{Fin}}{walk}$}; \\
+    \node (e2) {$\lexet{walk}{PRO \multimap{Bse}}{drive}$};                              \\
+    \node (e3) {$\lexet{\lambda{s}.s\bullet{drives}}{Nom\multimap{Fin}}{drive}$};    \\
+    \node (e5) {$\lexet{\lambda{s}.s\bullet{drove}}{Nom\multimap{Fin}}{PST(drive)}$};   \\
+    \node (e6) {$\lexet{driven}{PRO \multimap{Psp}}{drive}$};                            \\
+    \node (e4) {$\lexet{driving}{PRO \multimap{Prp}}{drive}$};                           \\
+  };
+
+  \draw[->] (bse) to node[fill=white] {.} (e2);
+  \draw[->] (bse) to node[fill=white,above] {$\scriptstyle f_1$} (e1);
+  \draw[->] (s) to node[fill=white] {.} (e3);
+  \draw[->] (ed) to node[fill=white] {.} (e5);
+  \draw[->] (en) to node[fill=white] {.} (e6);
+  \draw[->] (ing) to node[fill=white] {$\scriptstyle f_6$} (e4);
+  %\draw[->] (simple.east) .. controls +(right:6mm) .. (ded.east);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

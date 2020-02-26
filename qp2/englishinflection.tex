@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=stealth']
+  \matrix[column 1/.style={nodes={text width=8em,text ragged}}] at (-2,0)
+  {
+    \node {$ride\leq beat$}; \\
+    \node {$ride\leq abide$}; \\
+    \node {$strive\leq abide$}; \\
+    \node {$strive\leq weak$}; \\
+  };
+  \node (en) at (0,1) {$beat$};
+  \node (enove) at (1.5,0) {$ride$};
+  \node (ove) at (3,1) {$abide$};
+  \node (oveed) at (4.5,0) {$strive$};
+  \node (ed) at (6,1) {$weak$};
+  \draw[->] (en) to (enove);
+  \draw[->] (ove) to (enove);
+  \draw[->] (ove) to (oveed);
+  \draw[->] (ed) to (oveed);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

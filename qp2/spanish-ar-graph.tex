@@ -1,0 +1,16 @@
+\tikz [>=stealth', rounded corners]
+\graph [layered layout, sibling distance=0mm, grow=right, level distance=20mm]{
+  habl -> {habla, hablo, hable};
+
+  habla -> {hablas, hablan, hablamos};
+
+  "Non-High" [draw] // {hablemos};
+
+  hable -> {hablen, hables, hablemos};
+
+};
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

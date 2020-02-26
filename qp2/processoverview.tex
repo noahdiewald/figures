@@ -1,0 +1,46 @@
+\begin{tikzpicture}[>=stealth']
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,rectangle,text width=8em,text ragged}}] at (0,0)
+  {
+    \node (bse) {$\mathsf{bse},\mathrm{habl},\text{\scshape hablar}$};     \\
+  };
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,rectangle,text width=8.5em,text ragged}}] at (4.5,0)
+  {
+    \node (o) {$\mathsf{oed},\mathrm{hablo},\text{\scshape hablar}$};     \\
+    \node (a) {$\mathsf{ved},\mathrm{habla},\text{\scshape hablar}$};    \\
+    \node (e) {$\mathsf{eed},\mathrm{hablé},\text{\scshape hablar}$};   \\
+  };
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,rectangle,text width=9em,text ragged}}] at (9,0)
+  {
+    \node (an) {$\mathsf{ned},\mathrm{hablan},\text{\scshape hablar}$};     \\
+    \node (ar) {$\mathsf{red},\mathrm{hablar},\text{\scshape hablar}$};   \\
+    \node (as) {$\mathsf{sed},\mathrm{hablas},\text{\scshape hablar}$};    \\
+  };
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,rectangle,text width=9em,text ragged}}] at (13.5,0)
+  {
+    \node (are) {$\mathsf{vréed},\mathrm{hablaré},\text{\scshape hablar}$};     \\
+  };
+
+  \draw[->] (bse) to (o);
+  \draw[->] (bse) to (a);
+  \draw[->] (bse) to (e);
+  \draw[->] (a) to (an);
+  \draw[->] (a) to (as);
+  \draw[->] (a) to (ar);
+  \draw[->] (ar) to (are);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

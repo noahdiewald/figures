@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=stealth']
+  \node (bse) at (0,1) {$\sformt{ready}{tekobejegen}$};
+  \node (s) at (4,-2) {$\sformt{derived}{tekobejegen\red{m}}$};
+  \node (ing) at (4,-5) {$\sformt{one}{{\red{n}}tekobejegen\red{m}}$};
+  \node[fill=white] at (-1.7,-2) {$p_2\circ p_1$};
+
+  \draw[->] (bse) .. controls (-2,-2)  ..  (ing);
+  \draw[->] (bse) to node[fill=white] {\scriptsize $p_1(s\leq{ready})$} (s);
+  \draw[->] (s) to node[fill=white] {\scriptsize $p_2(s\leq{prefixable})$} (ing);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

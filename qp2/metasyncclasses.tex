@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=stealth']
+  \node (slept) at (0,0) {$slept$};
+  \node (loved) at (2,0) {$loved$};
+  \node (showed) at (4,0) {$showed$};
+  \node (ride) at (6,0) {$ride$};
+  \node (cut) at (8,0) {$cut$};
+  \node (grown) at (3,2) {$grown$};
+  \node (written) at (5,2) {$written$};
+  \node (drove) at (7,2) {$drove$};
+
+  \draw[->] (showed.north) to (grown.south);
+  \draw[->] (ride.north) to (written.south);
+  \draw[->] (ride.north) to (drove.south);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

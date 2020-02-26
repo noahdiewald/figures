@@ -1,0 +1,45 @@
+\begin{tikzpicture}[>=stealth']
+  \node[text width=7em, text ragged] at (-2.25,2.5) {Form-Form Mappings};
+  \node at (0,2.5) {F-Paradigm};
+  \node[text width=7em, text ragged] at (3.25,2.5) {Form-Sign Mappings};
+  \node at (7,2.5) {Sign-Paradigm};
+  
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,rectangle,draw,text width=9em,text ragged}}] at (0,0)
+  {
+    \node (bse) {$\me{base}{walk}{walk}$};     \\
+    \node (s) {$\me{s}{walks}{walk}$};    \\
+    \node (ed) {$\me{d\cprod n}{walked}{walk}$};   \\
+    \node (ing) {$\me{ing}{walking}{walk}$};  \\
+  };
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,rectangle,draw,text width=17em,text ragged}}] at (7,0)
+  {
+    \node (e1) {$\lexet{\lambda{s}.s\bullet{walk}}{Nom_{\neg3s}\multimap{Fin}}{walk}$}; \\
+    \node (e2) {$\lexet{walk}{PRO \multimap{Bse}}{walk}$};                              \\
+    \node (e3) {$\lexet{\lambda{s}.s\bullet{walks}}{Nom_{3s}\multimap{Fin}}{walk}$};    \\
+    \node (e5) {$\lexet{\lambda{s}.s\bullet{walked}}{Nom\multimap{Fin}}{past(walk)}$};   \\
+    \node (e6) {$\lexet{walked}{PRO \multimap{Psp}}{walk}$};                            \\
+    \node (e4) {$\lexet{walking}{PRO \multimap{Prp}}{walk}$};                           \\
+  };
+
+  \draw[->] (bse.west) .. controls +(left:20mm) and +(left:5mm) .. (s.west);
+  \draw[->] (bse.west) .. controls +(left:30mm) and +(left:5mm) .. (ed.west);
+  \draw[->] (bse.west) .. controls +(left:40mm) and +(left:5mm) .. (ing.west);
+
+  \draw[->] (bse.east) to (e2.west);
+  \draw[->] (bse.east) to (e1.west);
+  \draw[->] (s.east) to (e3.west);
+  \draw[->] (ed.east) to (e5.west);
+  \draw[->] (ed.east) to (e6.west);
+  \draw[->] (ing.east) to (e4.west);
+  %\draw[->] (simple.east) .. controls +(right:6mm) .. (ded.east);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

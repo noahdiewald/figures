@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=stealth']
+  \matrix[column 1/.style={nodes={text width=18em,text ragged}}] at (-1,0.5)
+  {
+    \node {$dive\leq_I drive$}; \\
+    \node {$dive\leq_I walk$}; \\
+  };
+
+  \node (3) at (0,1) {$drive$};
+  \node (34) at (1.5,0) {$dive$};
+  \node (4) at (3,1) {$walk$};
+
+  \draw[<-] (3) to (34.north);
+  \draw[<-] (4) to (34.north);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

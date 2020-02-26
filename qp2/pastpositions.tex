@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=stealth']
+  \matrix[column 1/.style={nodes={text width=8em,text ragged}}] at (-3,-1)
+  {
+    \node {$\mathsf{allpast}\leq \mathsf{past}$}; \\
+    \node {$\mathsf{allpast}\leq \mathsf{pstpart}$}; \\
+  };
+  \node (ded) at (0,0) {$\mathsf{past}$};
+  \node (ened) at (2,0) {$\mathsf{pstpart}$};
+  \node (dened) at (1,-2) {$\mathsf{allpast}$};
+
+  \draw[<-] (ded) to (dened);
+  \draw[<-] (ened) to (dened);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=stealth']
+  \node (strong) at (0,0) {strong};
+  \node (dependent) at (3,0) {dependent};
+  \node (inherent) at (6,0) {inherent};
+  \node (variablec) at (3,-3) {variable{\it c}};
+  \node (personc) at (0,-3) {person{\it c}};
+  \node (variablew) at (6,-3) {variable{\it w}};
+  \node (weak) at (6,-6) {weak};
+  \node (person) at (0,-6) {person};
+  \node (personw) at (3,-6) {person{\it w}};
+  \draw[->] (strong) to (dependent);
+  \draw[->] (strong) to (personc);
+  \draw[->] (inherent) to (dependent);
+  \draw[->] (inherent.south) to (variablew);
+  \draw[->] (weak) to (personw);
+  \draw[->] (person) to (personw);
+  \draw[->] (personc) to (variablec);
+  \draw[->] (inherent.south) to (variablec.north);
+  \draw[->] (personw.north) to (variablew.south);
+  \draw[->] (personw.north) to (personc.south);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

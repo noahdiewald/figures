@@ -1,0 +1,32 @@
+\begin{tikzpicture}[>=stealth']
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text width=4em,text ragged,rectangle,draw}},
+  column 2/.style={nodes={text width=4em,text ragged,rectangle,draw}}] at (-7,-1)
+  {
+    \node {$\mathrm{hablé}$}; & \node {$\mathsf{éed}$}; \\
+    \node {$\mathrm{hablaré}$}; & \node {$\mathsf{vréd}$}; \\
+    \node {$\mathrm{hablo}$}; & \node {$\mathsf{oed}$}; \\
+    \node {$\mathrm{hablará}$}; & \node {$\mathsf{vráed}$}; \\
+  };
+  \node (one) at (0,0) {$\mathsf{one}$};
+  \node (e) at (-1,-2) {$\mathsf{éed}$};
+  \node (vre) at (0,-2) {$\mathsf{vréd}$};
+  \node (o) at (1,-2) {$\mathsf{oed}$};
+  \node (vra) at (2,-2) {$\mathsf{vráed}$};
+  \node (later) at (1,-4) {$\mathsf{later}$};
+  \node (olater) at (-4,-2) {$\mathsf{olater}$};
+
+  \draw[->] (one.south) to (e.north);
+  \draw[->] (one.south) to (vre.north);
+  \draw[->] (one.south) to (o.north);
+  \draw[->] (later.north) to (vre.south);
+  \draw[->] (later.north) to (vra.south);
+  \draw[->] (olater.east) to (one.west);
+  \draw[->] (olater.east) to (later.west);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

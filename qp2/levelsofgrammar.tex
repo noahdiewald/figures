@@ -1,0 +1,16 @@
+\begin{tikzpicture}[>=stealth']
+  \node (bse) at (0,0) {Syntax};
+  \node (s) at (-3,-2) {Phonology};
+  \node (ing) at (3,-2) {Semantics};
+  \node (top) at (5,0) {pipeline};
+  \node (bottom) at (5,-2) {};
+
+  \draw[-] (bse) to (s);
+  \draw[-] (bse) to (ing);
+  \draw[->] (top) to (bottom);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+  \node (NP) at (0,0) {$NP$};
+  \node (PRO) at (0,-2) {$PRO$};
+  \node (It) at (0,-4) {$It$};
+  \node (Neu) at (0,-6) {$Neu$};
+  \node (NOM) at (-2,-2) {$NOM$};
+  \node (ACC) at (2,-2) {$ACC$};
+  \node (Nom) at (-2,-4) {$Nom$};
+  \node (Acc) at (2,-4) {$Acc$};
+  \draw [->] (NP) to (NOM);
+  \draw [->] (NP) to (PRO);
+  \draw [->] (NP) to (ACC);
+  \draw [->] (NOM) to (Nom);
+  \draw [->] (NOM) to (It);
+  \draw [->] (ACC) to (Acc);
+  \draw [->] (ACC) to (It);
+  \draw [->] (PRO) to (Nom);
+  \draw [->] (PRO) to (Acc);
+  \draw [->] (Nom) to (Neu);
+  \draw [->] (Acc) to (Neu);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

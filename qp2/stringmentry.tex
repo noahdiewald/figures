@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=stealth']
+  \matrix[column 1/.style={nodes={text width=9em,text ragged}}] at (-3.5,-1)
+  {
+    \node {$\mathsf{derived}\leq \mathsf{prefixable}$}; \\
+    \node {$\mathsf{ready}\leq \mathsf{prefixable}$}; \\
+  };
+
+  \node (bse) at (0,1) {$\sformt{ready}{tekobejegen}$};
+  \node (s) at (4,-2) {$\sformt{derived}{tekobejegen\red{m}}$};
+  \node (ed) at (0,-5) {$\sformt{one}{{\red{n}}tekobejegen}$};
+  \node (ing) at (4,-5) {$\sformt{one}{{\red{n}}tekobejegen\red{m}}$};
+
+  \draw[->] (bse) to node[fill=white] {\scriptsize $p_1(s\leq{ready})$} (s);
+  \draw[->] (bse) to node[fill=white] {\scriptsize $p_2(s\leq{prefixable})$} (ed);
+  \draw[->] (s) to node[fill=white] {\scriptsize $p_2(s\leq{prefixable})$} (ing);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:
