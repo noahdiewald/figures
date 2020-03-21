@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=stealth']
+  \node (stem) at (0,0) {freem};
+  \node (stemm) at (3,0) {bound};
+  \node (ndstemm) at (6,1) {nposs};
+  \node (nstemm) at (6,-1) {nposs};
+
+  \draw[->] (stem) to node [fill=white] {\footnotesize $m$} (stemm);
+  \draw[->] (stemm) to node [fill=white] {\footnotesize $ned$} (ndstemm);
+  \draw[->] (stemm) to node [fill=white] {\footnotesize $n$} (nstemm);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

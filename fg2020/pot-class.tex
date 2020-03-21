@@ -1,0 +1,42 @@
+\begin{tikzpicture}[>=stealth']
+  \matrix [row sep={2em}]
+  {
+    \node (l) {\begin{tabular}{c}\textsf{Long}\\ L···\\\end{tabular}}; &
+    \node (n) {\begin{tabular}{c}\textsf{No-Suffix}\\ ··N·\\\end{tabular}}; &
+    \node (m) {\begin{tabular}{c}\textsf{M-Suffix}\\ ···M\\\end{tabular}}; &
+    \node (s) {\begin{tabular}{c}\textsf{Short}\\ ·S··\\\end{tabular}}; \\
+    \node [color=gray] (ln) {L·N·}; &
+    \node (lm) {L··M}; &
+    \node (sn) {·SN·}; &
+    \node [color=gray] (sm) {·S·M}; \\
+    \node (lnm) {L·NM}; &
+    \node [color=gray] (lsn) {LSN·}; &
+    \node (lsm) {LS·M}; &
+    \node [color=gray] (snm) {·SNM}; \\
+    \node (lsnm) {LSNM}; & & \\
+  };
+
+  \draw[->] (ln.north) to (l.south);
+  \draw (ln.north) to (n.south);
+  \draw (lm.north) to (l.south);
+  \draw (lm.north) to (m.south);
+  \draw (sn.north) to (s.south);
+  \draw (sn.north) to (n.south);
+  \draw[->] (sm.north) to (s.south);
+  \draw (sm.north) to (m.south);
+  \draw[->] (lnm.north) to (ln.south);
+  \draw (lnm.north) to (lm.south);
+  \draw (lsn.north) to (ln.south);
+  \draw (lsn.north) to (sn.south);
+  \draw (lsm.north) to (lm.south);
+  \draw (lsm.north) to (sm.south);
+  \draw (snm.north) to (sn.south);
+  \draw[->] (snm.north) to (sm.south);
+  \draw[->] (lsnm.north) to (lnm.south);
+  \draw[->] (lsnm.north) to (lsm.south);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

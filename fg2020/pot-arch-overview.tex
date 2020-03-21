@@ -1,0 +1,46 @@
+\begin{tikzpicture}[>=stealth']
+  \node[text width=7em, text ragged] at (-3,1.75) {\small Form-Form\\ Mappings};
+  \node at (0,1.75) {\small F-Paradigm};
+  \node[text width=7em, text ragged] at (3.5,1.75) {\small Form-Sign\\ Mappings};
+  \node at (7,1.75) {\small Sign-Paradigm};
+  
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,rectangle,draw,text width=13em,text ragged}}] at (0,0)
+  {
+    \node (bse) {$\me{free}{mowech}{mowej}$};     \\
+    \node (s) {$\me{bound}{mowjem}{mowej}$};    \\
+    \node (ed) {$\me{nposs}{ndemowjem}{mowej}$};   \\
+    \node [color=gray] (ing2) {$\me{nposs}{nmowjem}{mowej}$};  \\
+    \node (ing) {$\me{nposs}{nmowech}{mowej}$};  \\
+    \node [color=gray] (ed2) {$\me{nposs}{ndemowech}{mowej}$};   \\
+  };
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,rectangle,draw,text width=15em,text ragged}}] at (7,0)
+  {
+    \node (e1) {$\lexet{mowech}{NP}{feces}$}; \\
+    \node (e2) {$\lexet{ndemowjem}{NP}{my(feces)}$};                              \\
+    \node [color=gray] (e32) {$\lexet{nmowjem}{NP}{my(feces)}$};    \\
+    \node (e3) {$\lexet{nmowech}{NP}{my(feces)}$};    \\
+    \node [color=gray] (e22) {$\lexet{ndemowech}{NP}{my(feces)}$};                              \\
+  };
+
+  \draw[->,color=gray] (bse.west) .. controls +(left:5mm) and +(left:5mm) .. node[color=black] {$f_1$} (s.west);
+  \draw[->,color=gray] (s.west) .. controls +(left:5mm) and +(left:5mm) .. node[color=black] {$f_2$} (ed.west);
+  \draw[->,color=gray] (s.west) .. controls +(left:15mm) and +(left:15mm) .. node[color=black] {$f_3$} (ing2.west);
+  \draw[->,color=gray] (bse.west) .. controls +(left:20mm) and +(left:20mm) .. node[color=black] {$f_3$} (ing.west);
+  \draw[->,color=gray] (bse.west) .. controls +(left:25mm) and +(left:25mm) .. node[color=black] {$f_2$} (ed2.west);
+
+  \draw[->,color=gray] (bse.east) to node[color=black] {$s_1$} (e1.west);
+  \draw[->,color=gray] (ed.east) to node[color=black] {$s_2$} (e2.west);
+  \draw[->,color=gray] (ing2.east) to node[color=black] {$s_2$} (e32.west);
+  \draw[->,color=gray] (ing.east) to node[color=black] {$s_2$} (e3.west);
+  \draw[->,color=gray] (ed2.east) to node[color=black] {$s_2$} (e22.west);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

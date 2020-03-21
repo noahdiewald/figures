@@ -1,0 +1,230 @@
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Arch Linux)  (format=lualatex 2019.11.17)  27 FEB 2020 01:29
+ restricted system commands enabled.
+ file:line:error style messages enabled.
+**\input pot-positions.tex
+Lua module: luaotfload-main 2019-09-13 3.00 luaotfload entry point
+Lua module: luaotfload-init 2019-09-13 3.00 luaotfload submodule / initialization
+Lua module: lualibs 2019-08-11 2.67 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2019-08-11 2.67 ConTeXt Lua libraries -- extended collection.
+Lua module: luaotfload-log 2019-09-13 3.00 luaotfload submodule / logging
+Lua module: luaotfload-parsers 2019-09-13 3.00 luaotfload submodule / filelist
+Lua module: luaotfload-configuration 2019-09-13 3.00 luaotfload submodule / config file reader
+luaotfload | conf : Root cache directory is /home/noah/.texlive/texmf-var/luatex-cache/generic/names.
+luaotfload | init : Loading fontloader “fontloader-2019-08-11.lua” from kpse-resolved path “/usr/share/texmf-dist/tex/luatex/luaotfload/fontloader-2019-08-11.lua”.
+Lua-only attribute luaotfload@state = 2
+Lua-only attribute luaotfload@noligature = 3
+Lua-only attribute luaotfload@syllabe = 4
+luaotfload | init : Context OpenType loader version “3.109”
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Lua module: luaotfload-loaders 2019-09-13 3.00 luaotfload submodule / callback handling
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua module: luaotfload-database 2019-09-13 3.00 luaotfload submodule / database
+Lua module: luaotfload-unicode 2019-09-13 3.00 luaotfload submodule / Unicode helpers
+Lua module: luaotfload-colors 2019-09-13 3.00 luaotfload submodule / color
+Lua-only attribute luaotfload_color_attribute = 5
+Lua module: luaotfload-resolvers 2019-09-13 3.00 luaotfload submodule / resolvers
+luaotfload | conf : Root cache directory is /home/noah/.texlive/texmf-var/luatex-cache/generic/names.
+Lua module: luaotfload-features 2019-09-13 3.00 luaotfload submodule / features
+Lua module: luaotfload-letterspace 2019-09-13 3.00 luaotfload submodule / color
+Lua module: luaotfload-embolden 2019-09-13 3.00 luaotfload submodule / color
+Lua module: luaotfload-notdef 2019-09-13 3.00 luaotfload submodule / color
+Lua module: luaotfload-auxiliary 2019-09-13 3.00 luaotfload submodule / auxiliary functions
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_xheight' at position 4 in `luaotfload.patch_font'.
+Lua module: luaotfload-multiscript 2019-09-13 3.00 luaotfload submodule / multiscript
+Inserting `luaotfload.rewrite_fontname' at position 5 in `luaotfload.patch_font'.
+luaotfload | main : initialization completed in 0.175 seconds
+
+(./pot-positions.tex
+
+./pot-positions.tex:1: LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}
+                     [>=stealth']
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./pot-positions.tex:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{tikzpicture}[
+                      >=stealth']
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./pot-positions.tex:2: Undefined control sequence.
+l.2   \node
+          (stem) at (-10,0) {freem};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./pot-positions.tex:3: Undefined control sequence.
+l.3   \node
+          (stemm) at (-2,0) {bound};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./pot-positions.tex:4: Undefined control sequence.
+l.4   \node
+          (ndstemm) at (8,4) {nposs};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./pot-positions.tex:5: Undefined control sequence.
+l.5   \node
+          (nstemm) at (8,-4) {nposs};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--6
+[][>=stealth']
+ []
+
+./pot-positions.tex:7: Undefined control sequence.
+l.7   \draw
+         [->] (stem) to node [fill=white] {\footnotesize $m$} (stemm);
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./pot-positions.tex:7: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \draw[
+          ->] (stem) to node [fill=white] {\footnotesize $m$} (stemm);
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./pot-positions.tex:7: Undefined control sequence.
+l.7 ...>] (stem) to node [fill=white] {\footnotesize
+                                                   $m$} (stemm);
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 7.
+./pot-positions.tex:8: Undefined control sequence.
+l.8   \draw
+         [->] (stemm) to node [fill=white] {\footnotesize $ned$} (ndstemm);
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./pot-positions.tex:8: Undefined control sequence.
+l.8 ...] (stemm) to node [fill=white] {\footnotesize
+                                                   $ned$} (ndstemm);
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./pot-positions.tex:9: Undefined control sequence.
+l.9   \draw
+         [->] (stemm) to node [fill=white] {\footnotesize $n$} (nstemm);
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./pot-positions.tex:9: Undefined control sequence.
+l.9 ...] (stemm) to node [fill=white] {\footnotesize
+                                                   $n$} (nstemm);
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./pot-positions.tex:10: LaTeX Error: \begin{document} ended by \end{tikzpicture
+}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 \end{tikzpicture}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 7--11
+[][-
+ []
+
+
+Overfull \hbox (8.78014pt too wide) in paragraph at lines 7--11
+\OML/cmm/m/it/10 m$
+ []
+
+
+Overfull \hbox (15.86348pt too wide) in paragraph at lines 7--11
+\OML/cmm/m/it/10 ned$
+ []
+
+
+Overfull \hbox (6.00235pt too wide) in paragraph at lines 7--11
+\OML/cmm/m/it/10 n$
+ []
+
+)
+! Emergency stop.
+<*> \input pot-positions.tex
+                         
+*** (job aborted, no legal \end found)
+
+
+
+Here is how much of LuaTeX's memory you used:
+ 23 strings out of 493864
+ 100000,106986 words of node,token memory allocated 2460 words of node memory still in use:
+   12 hlist, 6 disc, 2 local_par, 1 dir, 3 math, 53 glue, 3 kern, 5 penalty, 222
+ glyph, 13 attribute, 35 glue_spec, 13 attribute_list nodes
+   avail lists: 2:2,4:19,5:2,7:26,8:3,10:18
+ 4797 multiletter control sequences out of 65536+600000
+ 24 fonts using 1213655 bytes
+ 18i,1n,12p,99b,61s stack positions out of 5000i,500n,10000p,200000b,100000s
+!  ==> Fatal error occurred, no output PDF file produced!
