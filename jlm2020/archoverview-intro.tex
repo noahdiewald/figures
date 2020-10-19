@@ -1,0 +1,45 @@
+\begin{tikzpicture}[>=stealth']
+  \node[text width=5em, text ragged] at (0.5,3) {\bf Forms};
+  \node[text width=20em, text ragged] at (6,3) {\bf Distributional Categories};
+  
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,text width=3.5em,align=right}}] at (0,0)
+  {
+    \node (bse) {$\mathrm{leap}$};     \\
+    \node (s) {$\mathrm{leaps}$};    \\
+    \node (ed) {$\mathrm{leaped}$};   \\
+    \node (ed-2) {$\mathrm{leapt}$};   \\
+    \node (ing) {$\mathrm{leaping}$};  \\
+  };
+
+
+  \matrix[row sep=-\pgflinewidth,
+  %column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,text width=6em,text ragged}},
+  column 2/.style={nodes={text depth=0pt,text width=10em,text ragged}}] at (6,0)
+  {
+    \node (e1) {$\textsf{Nom}_{\neg{3}}\to\textsf{Fin}$}; & \node {I leap.}; \\
+    \node (e2) {$\textsf{Bse}$}; & \node {I/it might leap.}; \\
+    \node (e3) {$\textsf{Nom}_3\to\textsf{Fin}$}; & \node {It leaps.}; \\
+    \node (e5) {$\textsf{Nom}\to\textsf{Fin}$}; & \node {I/it leaped.}; \\
+    \node (e6) {$\textsf{Prp}$}; & \node {I/it had leaped.}; \\
+    \node (e5-2) {$\textsf{Nom}\to\textsf{Fin}$}; & \node {I/it leapt.}; \\
+    \node (e6-2) {$\textsf{Prp}$}; & \node {I/it had leapt.}; \\
+    \node (e4) {$\textsf{Psp}$}; & \node {I/it were leaping.}; \\
+  };
+
+  \draw[->] (bse.east) to (e1.west);
+  \draw[->] (bse.east) to (e2.west);
+  \draw[->] (s.east) to (e3.west);
+  \draw[->] (ed.east) to (e5.west);
+  \draw[->] (ed.east) to (e6.west);
+  \draw[->] (ed-2.east) to (e5-2.west);
+  \draw[->] (ed-2.east) to (e6-2.west);
+  \draw[->] (ing.east) to (e4.west);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

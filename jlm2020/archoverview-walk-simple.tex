@@ -1,0 +1,43 @@
+\begin{tikzpicture}[>=stealth']
+  \node[text width=5em, text ragged] at (0.5,2) {\bf Forms};
+  \node[text width=9em, text ragged] at (6,2) {\bf Lexical Entries};
+  
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,text width=3.5em,align=right}}] at (0,0)
+  {
+    \node (bse) {$\mathrm{walk}$};     \\
+    \node (s) {$\mathrm{walks}$};    \\
+    \node (ed) {$\mathrm{walked}$};   \\
+    \node (ing) {$\mathrm{walking}$};  \\
+  };
+
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,text width=12em,text ragged}}] at (6,0)
+  {
+    \node (e1) {$\lexem{\lambda{s}.s\bullet{walk}}{Nom_{\neg3s}\multimap{Fin}}{walk}$}; \\
+    \node (e2) {$\lexem{walk}{PRO \multimap{Bse}}{walk}$};                              \\
+    \node (e3) {$\lexem{\lambda{s}.s\bullet{walks}}{Nom_{3s}\multimap{Fin}}{walk}$};    \\
+    \node (e5) {$\lexem{\lambda{s}.s\bullet{walked}}{Nom\multimap{Fin}}{PST(walk)}$};   \\
+    \node (e6) {$\lexem{walked}{PRO \multimap{Psp}}{walk}$};                            \\
+    \node (e4) {$\lexem{walking}{PRO \multimap{Prp}}{walk}$};                           \\
+  };
+
+  \draw[->] (bse) to (e2.west);
+  \draw[->] (bse) to (e1.west);
+  \draw[->] (s) to (e3.west);
+  \draw[->] (ed) to (e5.west);
+  \draw[->] (ed) to (e6.west);
+  \draw[->] (ing) to (e4.west);
+  \draw[->] (bse.west) .. controls +(left:20mm) and +(left:5mm) .. (s.west);
+  \draw[->] (bse.west) .. controls +(left:30mm) and +(left:5mm) .. (ed.west);
+  \draw[->] (bse.west) .. controls +(left:40mm) and +(left:5mm) .. (ing.west);
+  %\draw[->] (simple.east) .. controls +(right:6mm) .. (ded.east);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:
