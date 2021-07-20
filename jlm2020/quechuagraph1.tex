@@ -1,0 +1,25 @@
+\begin{tikzpicture}[>=stealth']
+  \node (warmi) at (-1,0) {allqu};
+  \node (warmis) at (2,1) {allqus};
+  \node (warmiy) at (2,0) {allquy};
+  \node (warmikuna) at (2,-1) {allqukuna};
+  \node (warmiskuna) at (5,2) {allquskuna};
+  \node (warmisniy) at (5,1) {allqusniy};
+  \node (warmiykuna) at (5,0) {allquykuna};
+  \node (warmiykunas) at (8,0) {allquykunas};
+  \node (warmikunas) at (5,-1) {allqukunas};
+
+  \draw[->] (warmi) to (warmis.west);
+  \draw[->] (warmi) to (warmikuna.west);
+  \draw[->] (warmi) to (warmiy.west);
+  \draw[->] (warmis) to (warmiskuna.west);
+  \draw[->] (warmis) to (warmisniy.west);
+  \draw[->] (warmiy) to (warmiykuna.west);
+  \draw[->] (warmiykuna) to (warmiykunas.west);
+  \draw[->] (warmikuna) to (warmikunas.west);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:

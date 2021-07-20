@@ -1,0 +1,43 @@
+\begin{tikzpicture}[>=stealth']
+  \node[text width=5em, text ragged] at (0.5,2) {\bf Forms};
+  \node[text width=9em, text ragged] at (6,2) {\bf Inflections};
+  
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,text width=9em,align=right}}] at (0,0)
+  {
+    \node (bse) {base: walk};     \\
+    \node (s) {s-affixed: walks};    \\
+    \node (ed) {d-affixed: walked};   \\
+    \node (ing) {ing-affixed: walking};  \\
+  };
+
+
+  \matrix[row sep=-\pgflinewidth,
+  column sep=-\pgflinewidth,
+  column 1/.style={nodes={text depth=0pt,text width=14em,text ragged}}] at (6,0)
+  {
+    \node (e1) {non-3 singular: I walk.}; \\
+    \node (e2) {non-finite: I like to walk.};                              \\
+    \node (e3) {3 singular: She walks.};    \\
+    \node (e5) {past: She walked.};   \\
+    \node (e6) {past participle: He had walked.};                            \\
+    \node (e4) {present participle: He was walking.};                           \\
+  };
+
+  \draw[->] (bse.east) to (e2.west);
+  \draw[->] (bse.east) to (e1.west);
+  \draw[->] (s.east) to (e3.west);
+  \draw[->] (ed.east) to (e5.west);
+  \draw[->] (ed.east) to (e6.west);
+  \draw[->] (ing.east) to (e4.west);
+  \draw[->] (bse.west) .. controls +(left:20mm) and +(left:5mm) .. (s.west);
+  \draw[->] (bse.west) .. controls +(left:30mm) and +(left:5mm) .. (ed.west);
+  \draw[->] (bse.west) .. controls +(left:40mm) and +(left:5mm) .. (ing.west);
+  %\draw[->] (simple.east) .. controls +(right:6mm) .. (ded.east);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../morphology"
+%%% End:
