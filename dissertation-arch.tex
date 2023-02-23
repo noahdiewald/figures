@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+\node (fsm) at (0,0.5) {Form-Sign Mapping};
+\node[draw] (fp) at (-5,0) {Form Paradigm};
+\node[draw] (sp) at (5,0) {Sign Paradigm};
+\node (mr) at (2,3) {Meaning Relation};
+\node[draw,ellipse] (lsk) at (0,5) {Lexical Semantic Knowledge};
+\node (ffm) at (-5,-2.3) {Form-Form Mapping};
+
+\draw[->] (fp) to (sp);
+\draw[->] (lsk) to (fsm);
+\draw[->] (-5.1,-0.3) .. controls (-6,-0.5) and (-6,-2) .. (ffm.north) .. controls (-4,-2) and (-4,-0.5) .. (fp.south);
+\end{tikzpicture}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:
